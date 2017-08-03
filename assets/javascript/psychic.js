@@ -16,26 +16,26 @@ document.onkeyup = function(event) {
 
 	if (guess === secretLetter) {
 		wins++;
-		alert("You guessed the secret letter, you are psychic! Congrats!");
+		alert("You guessed the secret letter, you are psychic! This proves the paranormal totally exists...Congrats!");
 		guessesLeft = 9;
 		guessesThisRound.length = 0;
 		document.querySelector("#wins").innerHTML = "Wins:" + wins;
 		document.querySelector("#guessesLeft").innerHTML = "Guesses Left:" + guessesLeft;
-		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round" + guessesThisRound;
+		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round: " + guessesThisRound.toString();
 	}
 	else if (guessesLeft === 0) {
 		losses++;
-		alert("You are not psychic! You should try again!");
+		alert("You are not psychic! You should try again! You're probably not focused or something.");
 		guessesLeft = 9;
 		guessesThisRound.length = 0;
 		document.querySelector("#losses").innerHTML = "Losses:" + losses;
 		document.querySelector("#guessesLeft").innerHTML = "Guesses Left:" + guessesLeft;
-		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round" + guessesThisRound;
+		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round: " + guessesThisRound.toString();
 	}
 	else if (guess !== secretLetter) {
 		guessesLeft--;
 		guessesThisRound.push(guess);
 		document.querySelector("#guessesLeft").innerHTML = "Guesses Left:" + guessesLeft;
-		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round" + guessesThisRound[];
+		document.querySelector("#guessesThisRound").innerHTML ="Guesses This Round: " + guessesThisRound.toString();
 	}
 }
